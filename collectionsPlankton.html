@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Plankton</title>
+    <!--Google fonts-->
+    <script src="collectionsPlankton.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--My css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <h1>Plankton</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="plankton.html">Home</a></p>
+            <p class="navbar-link"><a href="collectionsPlankton.html">Collections</a></p>
+            <p class="navbar-link"><a href="contacts.html">Contacts</a></p>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!--Side navbar-->
+
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="plankton.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collectionsPlankton.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contacts.html">Contacts</a></p>
+        </div>
+    </div>
+    <br>
+
+    <!--product-->
+
+    <div class="product-section">
+        <form class="product-search">
+            <input type="text" id="search_bar" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+
+        <div class="products" id="products">
+            <div class="product_container-1">
+                <img src="https://cpimg.tistatic.com/5373425/s/4/mens-plain-shirt.jpg" alt="">
+                <p>Grey shirt</p>
+            </div>
+
+            <div class="product_container-1">
+                <img src="data:image/jpeg;base64,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" alt="">
+                <p>red shirt</p>
+            </div>
+
+            <div class="product_container-1">
+                <img src="https://www.gearforlife.com.au/wp-content/uploads/smpli-Restore-shirt-mens-lifestyle-200x200.jpg" alt="">
+                <p>dark blue shirt</p>
+            </div>
+
+            <div class="product_container-1">
+                <img src="https://www.gearforlife.com.au/wp-content/uploads/smpli-Linen-shirt-white-mens-lifestyle-200x200.jpg" alt="">
+                <p>white shirt</p>
+            </div>
+
+            <div class="product_container-1">
+                <img src="https://cpimg.tistatic.com/5373425/s/4/mens-plain-shirt.jpg" alt="">
+                <p>Grey shirt</p>
+            </div>
+
+            <div class="product_container-1">
+                <img src="data:image/jpeg;base64,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" alt="">
+                <p>red shirt</p>
+            </div>
+
+            <div class="product_container-1">
+                <img src="https://www.gearforlife.com.au/wp-content/uploads/smpli-Restore-shirt-mens-lifestyle-200x200.jpg" alt="">
+                <p>dark blue shirt</p>
+            </div>
+
+            <div class="product_container-1">
+                <img src="https://www.gearforlife.com.au/wp-content/uploads/smpli-Linen-shirt-white-mens-lifestyle-200x200.jpg" alt="">
+                <p>white shirt</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!--footer-->
+
+    <div class="footer">
+        <h2>Plankton</h2>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eveniet.</h4>
+        <p class="social">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </p>
+        <h3>@2024 Plankton.com</h3>
+    </div>
+
+</body>
+
+</html>
